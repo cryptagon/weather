@@ -11,13 +11,13 @@ export default function WeatherCard(props: Props) {
 
   return (
     <div className="weatherCard">
-      <div style={{ textSize: 18 }}>{result.name}</div>
+      <div style={{ fontSize: 18 }}>{result.name}</div>
 
       <img src={`http://openweathermap.org/img/wn/${result.weather[0].icon}@2x.png`} />
       
-      <div style={{ textSize: 12 }}>{result.weather[0].main}</div>
+      <div style={{ fontSize: 12 }}>{result.weather[0].main}</div>
 
-      <div style={{ marginTop: 8, textSize: 24 }}>{result.main.temp}° K</div>
+      <div style={{ marginTop: 8, fontSize: 24 }}>{result.main.temp}° K</div>
     </div>
   )
 }

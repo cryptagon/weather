@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent } from 'react'
+import React, { useState, ChangeEvent, KeyboardEvent } from 'react'
 import './app.css'
 
 type Props = {
@@ -12,7 +12,7 @@ export default function SearchBar(props: Props) {
     setText(evt.target.value)
   }
 
-  const onKeyDown = (evt: KeyboardEvent) => {
+  const onKeyDown = (evt: KeyboardEvent<HTMLInputElement>) => {
     if (evt.which == 13) {
       props.onSearch(text)
       setText('')
